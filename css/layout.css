@@ -9,6 +9,7 @@
     APP CONTENEDOR
 ==================================================*/
 
+
 .app{
 
     width:100%;
@@ -17,13 +18,20 @@
 
     margin:auto;
 
-    min-height:100vh;
+    height:100vh;
 
     background:var(--background);
 
     position:relative;
 
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
 }
+
 
 
 /*==================================================
@@ -33,9 +41,15 @@
 
 .header{
 
+
+    flex-shrink:0;
+
+
     position:relative;
 
+
     padding:30px 22px 100px;
+
 
 
     background:linear-gradient(
@@ -45,21 +59,31 @@
     );
 
 
+
     border-bottom-left-radius:32px;
 
     border-bottom-right-radius:32px;
 
 
+
     color:white;
+
 
 
     overflow:visible;
 
 
+
+    z-index:20;
+
+
+
 }
 
 
+
 /* decoración */
+
 
 .header::before{
 
@@ -113,6 +137,7 @@
 
 
 }
+
 
 
 /*==================================================
@@ -176,6 +201,7 @@
 }
 
 
+
 /*==================================================
     PERFIL
 ==================================================*/
@@ -233,6 +259,7 @@
 }
 
 
+
 /*==================================================
     TARJETA SEMANA
 ==================================================*/
@@ -281,7 +308,7 @@
 
 
 
-    z-index:10;
+    z-index:25;
 
 
 }
@@ -351,12 +378,25 @@
 
 
 
+
+
+
 /*==================================================
-    CONTENIDO GENERAL
+    CONTENIDO GENERAL CON SCROLL
 ==================================================*/
 
 
 .contenido{
+
+
+    flex:1;
+
+
+    overflow-y:auto;
+
+
+    overflow-x:hidden;
+
 
 
     padding:
@@ -364,7 +404,13 @@
         75px 18px 30px;
 
 
+
+    -webkit-overflow-scrolling:touch;
+
+
 }
+
+
 
 
 
@@ -377,6 +423,9 @@
 
 
     display:none;
+
+
+    min-height:100%;
 
 
     animation:
@@ -395,6 +444,8 @@
 
 
 }
+
+
 
 
 
@@ -426,6 +477,8 @@
 
 
 }
+
+
 
 
 
@@ -472,6 +525,10 @@
 
 
 
+
+
+
+
 /*==================================================
     CONTENIDO MODULOS
 ==================================================*/
@@ -511,8 +568,13 @@
 }
 
 
+
+
+
+
+
 /*==================================================
-    SCROLL
+    SCROLLBAR
 ==================================================*/
 
 
