@@ -1,0 +1,277 @@
+/*==================================================
+    RESPONSIVE.CSS
+    BANANO APP
+==================================================*/
+
+/*==================================================
+    PANTALLAS GRANDES
+==================================================*/
+
+@media (min-width: 900px){
+
+    body{
+
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+
+        padding:40px;
+
+        background:#E9EEF5;
+
+    }
+
+    .app{
+
+        max-width:480px;
+
+        border-radius:30px;
+
+        overflow:hidden;
+
+        box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+    }
+
+}
+
+/*==================================================
+    TABLETS
+==================================================*/
+
+@media (max-width:768px){
+
+    .header{
+
+        padding:28px 20px 100px;
+
+    }
+
+    .header h1{
+
+        font-size:28px;
+
+    }
+
+    .semana-card h2{
+
+        font-size:38px;
+
+    }
+
+}
+
+/*==================================================
+    CELULARES
+==================================================*/
+
+@media (max-width:480px){
+
+    .contenido{
+
+        padding:72px 14px 20px;
+
+    }
+
+    .header{
+
+        padding:24px 16px 95px;
+
+        border-bottom-left-radius:26px;
+        border-bottom-right-radius:26px;
+
+    }
+
+    .header h1{
+
+        font-size:24px;
+
+    }
+
+    .saludo{
+
+        font-size:12px;
+
+    }
+
+    .perfil-btn{
+
+        width:46px;
+        height:46px;
+
+        font-size:18px;
+
+    }
+
+    .semana-card{
+
+        left:14px;
+        right:14px;
+
+        padding:18px;
+
+        border-radius:20px;
+
+    }
+
+    .semana-card h2{
+
+        font-size:34px;
+
+    }
+
+    .semana-card i{
+
+        font-size:38px;
+
+    }
+
+    .kpis{
+
+        gap:14px;
+
+    }
+
+    .card{
+
+        min-height:165px;
+
+        padding:18px;
+
+    }
+
+    .card h3{
+
+        font-size:28px;
+
+    }
+
+    .card span{
+
+        font-size:13px;
+
+    }
+
+    .icono{
+
+        width:48px;
+        height:48px;
+
+        font-size:20px;
+
+        margin-bottom:14px;
+
+    }
+
+    .topbar{
+
+        margin-bottom:18px;
+
+    }
+
+    .topbar h2{
+
+        font-size:22px;
+
+    }
+
+    .back-btn{
+
+        width:42px;
+        height:42px;
+
+        font-size:16px;
+
+    }
+
+    .panel{
+
+        padding:18px;
+
+        border-radius:20px;
+
+    }
+
+}
+
+/*==================================================
+    CELULARES MUY PEQUEÑOS
+==================================================*/
+
+@media (max-width:360px){
+
+    .kpis{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .header h1{
+
+        font-size:22px;
+
+    }
+
+    .semana-card h2{
+
+        font-size:30px;
+
+    }
+
+    .card{
+
+        min-height:150px;
+
+    }
+
+    .card h3{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*==================================================
+    MODO HORIZONTAL
+==================================================*/
+
+@media (orientation:landscape) and (max-height:500px){
+
+    .header{
+
+        padding-bottom:80px;
+
+    }
+
+    .semana-card{
+
+        bottom:-35px;
+
+    }
+
+    .contenido{
+
+        padding-top:60px;
+
+    }
+
+}
+
+/*==================================================
+    REDUCIR ANIMACIONES
+==================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

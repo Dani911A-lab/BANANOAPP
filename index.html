@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>BANANO APP</title>
+
+
+
+<!-- FUENTE -->
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+
+
+<!-- ICONOS -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+
+
+<!-- ESTILOS -->
+
+<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+<div class="app">
+
+
+
+
+
+<!-- =====================================
+        HEADER PRINCIPAL
+===================================== -->
+
+
+<header class="header">
+
+
+    <div class="header-top">
+
+
+        <div>
+
+
+            <span class="saludo">
+
+                Bienvenido
+
+            </span>
+
+
+
+            <h1>
+
+                BANANO APP
+
+            </h1>
+
+
+        </div>
+
+
+
+
+
+        <button class="perfil-btn">
+
+
+            <i class="fa-solid fa-user"></i>
+
+
+        </button>
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="semana-card">
+
+
+        <div>
+
+
+            <small>
+
+                SEMANA ACTUAL
+
+            </small>
+
+
+
+            <h2 id="numeroSemana">
+
+                --
+
+            </h2>
+
+
+        </div>
+
+
+
+
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+
+
+    </div>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<main class="contenido">
+
+
+
+
+
+
+<!-- =====================================
+        DASHBOARD
+===================================== -->
+
+
+<section 
+id="dashboard"
+class="pantalla activa">
+
+
+
+
+
+<div class="kpis">
+
+
+
+
+
+<!-- PRODUCCION -->
+
+
+<button 
+class="card verde modulo"
+data-screen="produccion">
+
+
+<div class="icono">
+
+<i class="fa-solid fa-box"></i>
+
+</div>
+
+
+<span>
+
+Producción
+
+</span>
+
+
+
+<h3 id="kpiProduccion">
+
+0
+
+</h3>
+
+
+
+<small>
+
+Cajas semana
+
+</small>
+
+
+
+</button>
+
+
+
+
+
+
+
+
+<!-- LIQUIDACIONES -->
+
+
+<button 
+class="card azul modulo"
+data-screen="liquidaciones">
+
+
+<div class="icono">
+
+
+<i class="fa-solid fa-file-invoice-dollar"></i>
+
+
+</div>
+
+
+
+<span>
+
+Liquidaciones
+
+</span>
+
+
+
+<h3 id="kpiLiquidaciones">
+
+$0
+
+</h3>
+
+
+
+<small>
+
+Pendiente
+
+</small>
+
+
+
+</button>
+
+
+
+
+
+
+
+
+<!-- RECHAZOS -->
+
+
+<button 
+class="card naranja modulo"
+data-screen="rechazos">
+
+
+<div class="icono">
+
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+
+</div>
+
+
+
+<span>
+
+Rechazos
+
+</span>
+
+
+
+<h3 id="kpiRechazos">
+
+0%
+
+</h3>
+
+
+
+<small>
+
+Porcentaje
+
+</small>
+
+
+
+</button>
+
+
+
+
+
+
+
+
+<!-- GASTOS -->
+
+
+<button 
+class="card rojo modulo"
+data-screen="gastos">
+
+
+<div class="icono">
+
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+
+</div>
+
+
+
+<span>
+
+Gastos
+
+</span>
+
+
+
+<h3 id="kpiGastos">
+
+$0
+
+</h3>
+
+
+
+<small>
+
+Mes actual
+
+</small>
+
+
+
+</button>
+
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        PRODUCCION
+===================================== -->
+
+
+<section
+id="produccion"
+class="pantalla">
+
+
+
+<div class="topbar">
+
+
+
+<button class="back-btn">
+
+
+<i class="fa-solid fa-chevron-left"></i>
+
+
+</button>
+
+
+
+
+<h2>
+
+PRODUCCIÓN
+
+</h2>
+
+
+
+</div>
+
+
+
+
+
+<div 
+id="produccionContenido"
+class="modulo-contenedor">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        RECHAZOS
+===================================== -->
+
+
+<section
+id="rechazos"
+class="pantalla">
+
+
+
+<div class="topbar">
+
+
+
+<button class="back-btn">
+
+
+<i class="fa-solid fa-chevron-left"></i>
+
+
+</button>
+
+
+
+
+<h2>
+
+RECHAZOS
+
+</h2>
+
+
+
+</div>
+
+
+
+
+
+<div 
+id="rechazosContenido"
+class="modulo-contenedor">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        GASTOS
+===================================== -->
+
+
+<section
+id="gastos"
+class="pantalla">
+
+
+
+<div class="topbar">
+
+
+
+<button class="back-btn">
+
+
+<i class="fa-solid fa-chevron-left"></i>
+
+
+</button>
+
+
+
+
+<h2>
+
+GASTOS
+
+</h2>
+
+
+
+</div>
+
+
+
+
+
+<div 
+id="gastosContenido"
+class="modulo-contenedor">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        LIQUIDACIONES
+===================================== -->
+
+
+<section
+id="liquidaciones"
+class="pantalla">
+
+
+
+<div class="topbar">
+
+
+
+<button class="back-btn">
+
+
+<i class="fa-solid fa-chevron-left"></i>
+
+
+</button>
+
+
+
+
+<h2>
+
+LIQUIDACIONES
+
+</h2>
+
+
+
+</div>
+
+
+
+
+
+<div 
+id="liquidacionesContenido"
+class="modulo-contenedor">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        JAVASCRIPT
+===================================== -->
+
+
+<script src="js/utils.js"></script>
+
+
+<!-- CONEXION GOOGLE SHEETS -->
+
+<script src="js/api.js"></script>
+
+
+<!-- DATOS -->
+
+<script src="js/data.js"></script>
+
+
+
+<!-- MODULOS -->
+
+<script src="js/produccion.js"></script>
+
+<script src="js/rechazos.js"></script>
+
+<script src="js/gastos.js"></script>
+
+<script src="js/liquidaciones.js"></script>
+
+
+
+<!-- CONTROL APP -->
+
+<script src="js/app.js"></script>
+
+
+
+
+</body>
+
+
+</html>
